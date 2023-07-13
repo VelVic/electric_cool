@@ -1,0 +1,7 @@
+{
+  "name": "Descubre_Veracruz",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

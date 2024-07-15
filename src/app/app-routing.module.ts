@@ -43,7 +43,7 @@ const routes: Routes = [
   {
     path: 'a-gastos',
     loadChildren: () => import('./vistas/a-gastos/a-gastos.module').then( m => m.AGastosPageModule)
-  },
+  }
 ];
 
 @NgModule({

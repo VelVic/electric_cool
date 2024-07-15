@@ -1,0 +1,42 @@
+<ion-header collapse="fade">
+  <ion-toolbar class="color_azul">
+    <ion-title>Registros</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="llamarMenu()">
+        <ion-icon size="large" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="background ion-padding">
+
+  <ion-grid>
+
+    <ion-row class="ion-justify-content-center">
+
+      <ion-col size="12">
+        
+        <ion-card class="ion-text-center">
+          
+          <ion-card-header>
+            <ion-card-title>¡Bienvenido! Usuario</ion-card-title>
+          </ion-card-header>
+
+          <ion-card-header>
+            <ion-card-title>Registros Ficticios</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Aquí se mostraran los registros ficticios de la aplicación</p>
+          </ion-card-content>
+        </ion-card>
+
+        <ion-input label="Cliente" label-placement="floating" fill="outline" placeholder="Ingresa el nombre del cliente"></ion-input>
+
+      </ion-col>
+
+    </ion-row>
+
+  </ion-grid>
+
+</ion-content>

@@ -28,44 +28,21 @@ const routes: Routes = [
     /* canActivate:[AuthGuard] */
   },
   {
-    path: 'gastos',
-    loadChildren: () => import('./vistas/info/info.module').then( m => m.InfoPageModule),
+    path: 'a-registros',
+    loadChildren: () => import('./vistas/a-registros/a-registros.module').then( m => m.ARegistrosPageModule),
     /* canActivate:[AuthGuard] */
   },
   {
-    path: 'papantla',
-    loadChildren: () => import('./vistas/papantla/papantla.module').then( m => m.PapantlaPageModule),
-    canActivate:[AuthGuard]
+    path: 'a-inventario',
+    loadChildren: () => import('./vistas/a-inventario/a-inventario.module').then( m => m.AInventarioPageModule)
   },
   {
-    path: 'tuxpan',
-    loadChildren: () => import('./vistas/tuxpan/tuxpan.module').then( m => m.TuxpanPageModule),
-    canActivate:[AuthGuard]
+    path: 'a-herramientas',
+    loadChildren: () => import('./vistas/a-herramientas/a-herramientas.module').then( m => m.AHerramientasPageModule)
   },
   {
-    path: 'tecolutla',
-    loadChildren: () => import('./vistas/tecolutla/tecolutla.module').then( m => m.TecolutlaPageModule),
-    canActivate:[AuthGuard]
-  },
-  {
-    path: 'zozocolco',
-    loadChildren: () => import('./vistas/zozocolco/zozocolco.module').then( m => m.ZozocolcoPageModule),
-    canActivate:[AuthGuard]
-  },
-  {
-    path: 'registros',
-    loadChildren: () => import('./vistas/m-festejos/m-festejos.module').then( m => m.MFestejosPageModule),
-    /* canActivate:[AuthGuard] */
-  },
-  {
-    path: 'inventario',
-    loadChildren: () => import('./vistas/m-lugares/m-lugares.module').then( m => m.MLugaresPageModule),
-    /* canActivate:[AuthGuard] */
-  },
-  {
-    path: 'herramientas',
-    loadChildren: () => import('./vistas/m-gastronomia/m-gastronomia.module').then( m => m.MGastronomiaPageModule),
-    /* canActivate:[AuthGuard] */
+    path: 'a-gastos',
+    loadChildren: () => import('./vistas/a-gastos/a-gastos.module').then( m => m.AGastosPageModule)
   },
 ];
 

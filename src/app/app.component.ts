@@ -20,25 +20,25 @@ export class AppComponent {
     {
       icon: 'clipboard-outline',
       nombre: 'Registros',
-      ruta: '/registros',
+      ruta: '/a-registros',
       color:'dark'
     },
     {
       icon: 'albums-outline',
       nombre: 'Inventario',
-      ruta: '/inventario',
+      ruta: '/a-inventario',
       color:'dark'
     },
     {
       icon: 'hammer-outline',
       nombre: 'Herramientas',
-      ruta: '/herramientas',
+      ruta: '/a-herramientas',
       color:'dark'
     },
     {
       icon: 'cash-outline',
       nombre: 'Gastos',
-      ruta: '/gastos',
+      ruta: '/a-gastos',
       color:'dark'
     }
   ];

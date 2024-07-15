@@ -1,0 +1,37 @@
+<ion-header collapse="fade">
+  <ion-toolbar class="color_azul">
+    <ion-title>Gastos</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="llamarMenu()">
+        <ion-icon size="large" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="background ion-padding">
+  
+    <ion-list [inset]="true">
+      <ion-item [button]="true">
+        <ion-icon color="danger" slot="start" name="list-circle" size="large"></ion-icon>
+        <ion-label>General</ion-label>
+        <ion-note slot="end">6</ion-note>
+      </ion-item>
+      <ion-item [button]="true">
+        <ion-icon color="tertiary" slot="start" name="list-circle" size="large"></ion-icon>
+        <ion-label>Compras</ion-label>
+        <ion-note slot="end">15</ion-note>
+      </ion-item>
+      <ion-item [button]="true">
+        <ion-icon color="success" slot="start" name="list-circle" size="large"></ion-icon>
+        <ion-label>Herramienta</ion-label>
+        <ion-note slot="end">3</ion-note>
+      </ion-item>
+      <ion-item [button]="true">
+        <ion-icon color="warning" slot="start" name="list-circle" size="large"></ion-icon>
+        <ion-label>Otros</ion-label>
+        <ion-note slot="end">8</ion-note>
+      </ion-item>
+    </ion-list>
+
+</ion-content>

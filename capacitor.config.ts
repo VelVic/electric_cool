@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'Descubre_Veracruz',
+  appId: 'com.descubre_veracruz.app',
+  appName: 'Descubre Veracruz',
   webDir: 'www',
   server: {
     androidScheme: 'https'

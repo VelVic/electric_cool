@@ -1,0 +1,175 @@
+<ion-header collapse="fade">
+  <ion-toolbar class="color_azul">
+    <ion-title>Inicio</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="llamarMenu()">
+        <ion-icon size="large" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="background ion-padding">
+
+  <ion-grid>
+
+    <ion-row class="ion-justify-content-center">
+
+      <ion-col size="12">
+        <ion-card class="ion-text-center">
+          <ion-card-header>
+            <ion-card-title>Datos Ficticios</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>Aquí se mostrarían los datos de los usuarios de la aplicación</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+
+      <ion-col size="12">
+        <ion-card class="ion-text-center">
+
+          <ion-list [inset]="true">
+
+            <ion-item-sliding>
+              <ion-item [button]="true">
+                <ion-avatar aria-hidden="true" slot="start">
+                  <img alt="" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+                </ion-avatar>
+                <ion-label>
+                  <h2>Televisión</h2>
+                  <p>Ingreso: 27/06/2024</p>
+                  <p>Cliente: Ezequiel Vazquez</p>
+                </ion-label>
+              </ion-item>
+              <ion-item-options slot="end">
+                <ion-item-option color="success">
+                  <ion-icon slot="icon-only" name="call"></ion-icon>
+                </ion-item-option>
+                <ion-item-option color="warning">
+                  <ion-icon slot="icon-only" name="create"></ion-icon>
+                </ion-item-option>
+                <ion-item-option color="danger" expandable="true">
+                  <ion-icon slot="icon-only" name="trash"></ion-icon>
+                </ion-item-option>
+              </ion-item-options>
+            </ion-item-sliding>
+        
+            <ion-item-sliding>
+              <ion-item [button]="true">
+                <ion-avatar aria-hidden="true" slot="start">
+                  <img alt="" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+                </ion-avatar>
+                <ion-label>
+                  <h2>Refrigerador/Congelador</h2>
+                  <p>Ingreso: 27/06/2024</p>
+                  <p>Cliente: Ezequiel Vazquez</p>
+                </ion-label>
+              </ion-item>
+              <ion-item-options slot="end">
+                <ion-item-option color="success">
+                  <ion-icon slot="icon-only" name="call"></ion-icon>
+                </ion-item-option>
+                <ion-item-option color="warning">
+                  <ion-icon slot="icon-only" name="create"></ion-icon>
+                </ion-item-option>
+                <ion-item-option color="danger" expandable="true">
+                  <ion-icon slot="icon-only" name="trash"></ion-icon>
+                </ion-item-option>
+              </ion-item-options>
+            </ion-item-sliding>
+
+            <ion-item-sliding>
+              <ion-item [button]="true">
+                <ion-avatar aria-hidden="true" slot="start">
+                  <img alt="" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+                </ion-avatar>
+                <ion-label>
+                  <h2>Reproductor</h2>
+                  <p>Ingreso: 08/03/2024</p>
+                  <p>Cliente: Julio Cesár</p>
+                </ion-label>
+              </ion-item>
+              <ion-item-options slot="end">
+                <ion-item-option color="success">
+                  <ion-icon slot="icon-only" name="call"></ion-icon>
+                </ion-item-option>
+                <ion-item-option color="warning">
+                  <ion-icon slot="icon-only" name="create"></ion-icon>
+                </ion-item-option>
+                <ion-item-option color="danger" expandable="true">
+                  <ion-icon slot="icon-only" name="trash"></ion-icon>
+                </ion-item-option>
+              </ion-item-options>
+            </ion-item-sliding>
+
+            <ion-item-sliding>
+              <ion-item [button]="true">
+                <ion-avatar aria-hidden="true" slot="start">
+                  <img alt="" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+                </ion-avatar>
+                <ion-label>
+                  <h2>Ventilador</h2>
+                  <p>Ingreso: 12/01/2024</p>
+                  <p>Cliente: Abraham Cayetano</p>
+                </ion-label>
+              </ion-item>
+              <ion-item-options slot="end">
+                <ion-item-option color="success">
+                  <ion-icon slot="icon-only" name="call"></ion-icon>
+                </ion-item-option>
+                <ion-item-option color="warning">
+                  <ion-icon slot="icon-only" name="create"></ion-icon>
+                </ion-item-option>
+                <ion-item-option color="danger" expandable="true">
+                  <ion-icon slot="icon-only" name="trash"></ion-icon>
+                </ion-item-option>
+              </ion-item-options>
+            </ion-item-sliding>
+
+            <ion-item-sliding>
+              <ion-item [button]="true">
+                <ion-avatar aria-hidden="true" slot="start">
+                  <img alt="" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+                </ion-avatar>
+                <ion-label>
+                  <h2>Extractor</h2>
+                  <p>Ingreso: 16/05/2024</p>
+                  <p>Cliente: Andrea Ordoñez</p>
+                </ion-label>
+              </ion-item>
+              <ion-item-options slot="end">
+                <ion-item-option color="success">
+                  <ion-icon slot="icon-only" name="call"></ion-icon>
+                </ion-item-option>
+                <ion-item-option color="warning">
+                  <ion-icon slot="icon-only" name="create"></ion-icon>
+                </ion-item-option>
+                <ion-item-option color="danger" expandable="true">
+                  <ion-icon slot="icon-only" name="trash"></ion-icon>
+                </ion-item-option>
+              </ion-item-options>
+            </ion-item-sliding>
+
+          </ion-list>
+        </ion-card>
+
+      </ion-col>
+
+    </ion-row>
+
+  </ion-grid>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+      <ion-button size="large" class="color_azul" shape="round" expand="block" href="/registros">
+        <ion-icon slot="icon-only" md="add"></ion-icon>
+      </ion-button>
+  </ion-fab>
+
+  <!-- <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-button routerLink="/registros" fill="outline" shape="round" expand="block" class="background">
+      <ion-icon slot="icon-only" md="add"></ion-icon>
+    </ion-button>
+  </ion-fab> -->
+
+</ion-content>

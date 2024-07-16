@@ -1,5 +1,5 @@
 <ion-header collapse="fade">
-  <ion-toolbar class="color_azul">
+  <ion-toolbar class="light">
     <ion-title>Inventario</ion-title>
     <ion-buttons slot="start">
       <ion-button (click)="llamarMenu()">
@@ -9,16 +9,30 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="background ion-padding">
-  <ion-grid>
-
-    <ion-row>
-      <ion-col size="12">
-        
-
-      </ion-col>
-    </ion-row>
-
-  </ion-grid>
+<ion-content [fullscreen]="true" class="ion-padding">
+  
+  <ion-list>
+    <ion-item-sliding *ngFor="let item of inventario">
+      <ion-item button>
+        <ion-avatar slot="start">
+          <img src="{{ item.imagen }}" alt="{{ item.nombre }}" />
+        </ion-avatar>
+        <ion-label>
+          <h2>{{ item.nombre }}</h2>
+          <p>{{ item.descripcion }}</p>
+          <p><strong>Stock:</strong> {{ item.stock }}</p>
+          <p><strong>Precio:</strong> ${{ item.precio }}</p>
+        </ion-label>
+      </ion-item>
+      <ion-item-options side="end">
+        <ion-item-option color="tertiary">
+          <ion-icon slot="icon-only" name="share-social"></ion-icon>
+        </ion-item-option>
+        <ion-item-option color="danger">
+          <ion-icon slot="icon-only" name="trash"></ion-icon>
+        </ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+  </ion-list>
 
 </ion-content>

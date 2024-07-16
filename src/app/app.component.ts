@@ -29,7 +29,7 @@ export class AppComponent {
       ruta: '/a-inventario',
       color:'dark'
     },
-    {
+    /* {
       icon: 'hammer-outline',
       nombre: 'Herramientas',
       ruta: '/a-herramientas',
@@ -40,7 +40,7 @@ export class AppComponent {
       nombre: 'Gastos',
       ruta: '/a-gastos',
       color:'dark'
-    },
+    }, */
     {
       icon: 'person-add-outline',
       nombre: 'Crear Cuenta',
@@ -63,7 +63,7 @@ export class AppComponent {
   }
   cerrarsesion(){
     this.servicio.logout();
-    this.ruta.navigateByUrl('/entrance');
+    this.ruta.navigateByUrl('/login');
     this.menu.close('menu');
   }
 }

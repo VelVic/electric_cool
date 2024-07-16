@@ -1,5 +1,5 @@
 <ion-header collapse="fade">
-  <ion-toolbar class="color_azul">
+  <ion-toolbar class="light">
     <ion-title>Registros</ion-title>
     <ion-buttons slot="start">
       <ion-button (click)="llamarMenu()">
@@ -9,7 +9,7 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="background ion-padding">
+<ion-content [fullscreen]="true" class="ion-padding">
 
   <ion-grid>
 
@@ -34,7 +34,11 @@
         <ion-col size="10" class="ion-align-self-center">
 
           <form (ngSubmit)="r_registros(form)" #form="ngForm">
-  
+
+            <ion-card>
+              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+            </ion-card>
+
             <ion-input
               [(ngModel)]="registros.cliente"
               aria-label="Custom input" placeholder="Custom input" class="custom"
@@ -51,6 +55,10 @@
               text
             ></ion-input>
   
+            <ion-card>
+              <img alt="Silhouette of mountains" src="https://ionicframework.com/docs/img/demos/card-media.png" />
+            </ion-card>
+            
             <ion-input
               [(ngModel)]="registros.electrodomestico"
               aria-label="Custom input" placeholder="Custom input" class="custom"
@@ -99,11 +107,11 @@
               text
               ></ion-input>
   
-            <ion-button type="submit" fill="outline" shape="round" expand="block" color="">
+            <ion-button type="submit" fill="outline" shape="round" expand="block" color="danger">
               Registrar
             </ion-button> <br>
   
-            <ion-button routerLink="/entrance" fill="outline" shape="round" expand="block" color="">
+            <ion-button routerLink="/index" fill="outline" shape="round" expand="block" color="danger">
               Cancelar
             </ion-button>
   

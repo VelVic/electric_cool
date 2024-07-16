@@ -74,7 +74,7 @@ export class RegisterPage implements OnInit {
       }
     });
   }
-  
+
   confirmarEliminacion(uid: string) {
     if (confirm('¿Estás seguro de que deseas eliminar este usuario?')) {
       this.userService.deleteUser(uid).subscribe({
@@ -122,7 +122,7 @@ export class RegisterPage implements OnInit {
 
   salir() {
     this.servicio.logout();
-    this.ruta.navigateByUrl('/entrance');
+    this.ruta.navigateByUrl('/login');
   }
 
   registrar(form: NgForm) {
@@ -146,7 +146,7 @@ export class RegisterPage implements OnInit {
           localStorage.setItem('email_r', this.usuario.email);
         }
 
-        this.ruta.navigateByUrl('/index');
+        this.ruta.navigateByUrl('/register');
       },
       err => {
         console.log(err.error.error.menssage);

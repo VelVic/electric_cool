@@ -1,44 +1,77 @@
-<ion-content class="background ion-padding">
-
-  <div class="separador"></div>
-
-  <ion-grid fixed>
+<ion-header collapse="fade">
+  <ion-toolbar class="color_azul">
 
     <ion-row class="ion-justify-content-center">
-
-      <ion-row class="ion-justify-content-center">
-        <ion-col size="9.5">
-          <div class="transparente ion-margin-bottom">
-            <img src="/assets/img/icono_logo_ec.png" alt="">
-          </div>
+      <ion-col size=".5">
+          <img src="/assets/img/icono_ec.png" alt="">
         </ion-col>
+        <ion-title>Electric Cool</ion-title>
       </ion-row>
 
-      <ion-col size="9">
+    <ion-buttons slot="end">
+      <ion-button expand="block" fill="clear" shape="round" routerLink="/quienessomos">
+        ¿Quienes somos?
+      </ion-button>
+      <ion-button expand="block" fill="clear" shape="round" routerLink="/login">
+        Iniciar Sesión
+      </ion-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
 
-        <ion-card color="dark">
-          <ion-card-content class="ion-text-center">
-            Bienvenido!!
-            Esta es la pagina principal de la pagina web, para poder acceder a las demas funcionalidades de ADMON es necesario iniciar sesion o registrarse.
-          </ion-card-content>
-        </ion-card>
+<ion-content [fullscreen]="true" class="background ion-padding">
+  <ion-card>
+    <swiper-container (slidechange)="swiperSlideChanged($event)" [loop]="true" [pagination]="true">
 
-        <ion-col>
-          <ion-button routerLink="/login" fill="outline" shape="round" expand="block">
-            Iniciar Sesion
-          </ion-button>
-        </ion-col>
+      <swiper-slide>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR8FM2FGxQjdyJTzqhPPFMfFI0IFqTk6KTy9g&s" alt=""
+          width="950" height="250"></swiper-slide>
+      <swiper-slide>
+        <img
+          src="https://scontent.ftlc3-1.fna.fbcdn.net/v/t39.30808-6/337700759_1404754687021917_193137979991912457_n.png?_nc_cat=109&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=caEF9VTV2AYQ7kNvgHzGO9R&_nc_ht=scontent.ftlc3-1.fna&oh=00_AYDhuhxP2UYOGIcbbPjesGw8RUu_n6qs0LX3BP62sDbckQ&oe=669AB1A1"
+          alt="" width="950" height="250"></swiper-slide>
+      <swiper-slide>
+        <img src="https://scontent.ftlc3-1.fna.fbcdn.net/v/t39.30808-6/335652525_624712876165319_6202702238643192252_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=833d8c&_nc_ohc=ztGHFnDMo6oQ7kNvgEec2h0&_nc_ht=scontent.ftlc3-1.fna&oh=00_AYAHcTxSJfti2PE9k-KaShaaw0FqAk9CUwOrLiFm019-_g&oe=669AA9B7"
+          alt="" width="950" height="250"></swiper-slide>
+    </swiper-container>
 
-        <ion-col>
-          <ion-button routerLink="/register" fill="outline" shape="round" expand="block">
-            Registrarme
-          </ion-button>
-        </ion-col>
+  </ion-card>
 
-      </ion-col>
+  <h1 class="ion-text-center">Servicio Técnico</h1>
 
-    </ion-row>
+  <ion-card>
+    <ion-card>
+      <img alt="Silhouette of mountains"
+        src="https://www.limpiezaslm2.com/wp-content/uploads/2017/10/reparadores-de-electrodomesticos-1024x452.jpg" />
+      <ion-card-header>
+        <ion-card-title>Mantenimiento</ion-card-title>
+      </ion-card-header>
 
-  </ion-grid>
+      <ion-button expand="block">Ver más</ion-button>
+    </ion-card>
+    <br>
+    <ion-card>
+      <img alt="Silhouette of mountains"
+        src="https://www.mielectro.es/blog/wp-content/uploads/2024/04/Servicio-de-instalacion.png" />
+      <ion-card-header>
+        <ion-card-title>Instalación</ion-card-title>
+      </ion-card-header>
+
+      <ion-button expand="block">Ver más</ion-button>
+    </ion-card>
+    <br>
+    <ion-card>
+      <img alt="Silhouette of mountains"
+        src="https://adsonline.com.co/servitecnico/wp-content/uploads/2023/04/instalacion-1.jpg" />
+      <ion-card-header>
+        <ion-card-title>Reparación</ion-card-title>
+      </ion-card-header>
+
+      <ion-button expand="block">Ver más</ion-button>
+    </ion-card>
+  </ion-card>
+
+  <br>
 
 </ion-content>

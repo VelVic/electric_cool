@@ -4,19 +4,20 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { EntrancePageRoutingModule } from './entrance-routing.module';
+import { QuienessomosPageRoutingModule } from './quienessomos-routing.module';
 
-import { EntrancePage } from './entrance.page';
-import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core'
+import { QuienessomosPage } from './quienessomos.page';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    EntrancePageRoutingModule
+    QuienessomosPageRoutingModule
   ],
-  declarations: [EntrancePage],
+  declarations: [QuienessomosPage],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
-export class EntrancePageModule {}
+export class QuienessomosPageModule {}

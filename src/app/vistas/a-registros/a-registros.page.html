@@ -31,7 +31,86 @@
           </ion-card-content>
         </ion-card>
 
-        <ion-input label="Cliente" label-placement="floating" fill="outline" placeholder="Ingresa el nombre del cliente"></ion-input>
+        <ion-col size="10" class="ion-align-self-center">
+
+          <form (ngSubmit)="r_registros(form)" #form="ngForm">
+  
+            <ion-input
+              [(ngModel)]="registros.cliente"
+              aria-label="Custom input" placeholder="Custom input" class="custom"
+              helperText=" "
+              [counter]="true"
+              [maxlength]="40"
+              shape="round"
+              type="text"
+              placeholder="Ingresa nombre del cliente"
+              fill="outline"
+              name="cliente_r"
+              id="cliente_r"
+              errorText="Ingresar texto."
+              text
+            ></ion-input>
+  
+            <ion-input
+              [(ngModel)]="registros.electrodomestico"
+              aria-label="Custom input" placeholder="Custom input" class="custom"
+              helperText=" "
+              [counter]="true"
+              [maxlength]="40"
+              shape="round"
+              type="text"
+              placeholder="Ingresa el electrodomestico"
+              fill="outline"
+              name="electrodomestico_r"
+              id="electrodomestico_r"
+              errorText="Ingresar texto."
+              text
+            ></ion-input>
+  
+            <ion-input
+              [(ngModel)]="registros.estatus"
+              aria-label="Custom input" placeholder="Custom input" class="custom"
+              helperText=" "
+              [counter]="true"
+              [maxlength]="40"
+              shape="round"
+              type="text"
+              placeholder="Ingresa el estado del electrodomestico"
+              fill="outline"
+              name="estatus_r"
+              id="estatus_r"
+              errorText="Ingresar texto."
+              text
+              ></ion-input>
+  
+            <ion-input
+              [(ngModel)]="registros.descripcion"
+              aria-label="Custom input" placeholder="Custom input" class="custom"
+              helperText=" "
+              [counter]="true"
+              [maxlength]="100"
+              shape="round"
+              type="text"
+              placeholder="Describe el problema"
+              fill="outline"
+              name="descripcion_r"
+              id="descripcion_r"
+              errorText="Minimo 6 caracteres"
+              text
+              ></ion-input>
+  
+            <ion-button type="submit" fill="outline" shape="round" expand="block" color="">
+              Registrar
+            </ion-button> <br>
+  
+            <ion-button routerLink="/entrance" fill="outline" shape="round" expand="block" color="">
+              Cancelar
+            </ion-button>
+  
+          </form>
+  
+        </ion-col>
+
 
       </ion-col>
 

@@ -1,112 +1,92 @@
 <ion-header collapse="fade">
-<ion-toolbar class="color_azul">
-  <ion-buttons slot="start">
-    <ion-back-button defaultHref="/entrance"></ion-back-button>
-  </ion-buttons>
-  <ion-title>Crear Cuenta</ion-title>
-</ion-toolbar>
+  <ion-toolbar class="color_azul">
+    <ion-title>Crear Cuenta</ion-title>
+    <ion-buttons slot="start">
+      <ion-button (click)="llamarMenu()">
+        <ion-icon size="large" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
 </ion-header>
+
 <ion-content class="ion-padding background">
-
   <ion-grid fixed>
-
     <ion-row class="ion-justify-content-center">
-
       <ion-row class="ion-justify-content-center">
-        <ion-col size="8">
+        <ion-col size="6">
           <div class="transparente ion-margin-bottom">
             <img src="/assets/img/icono_ec.png" alt="">
           </div>
         </ion-col>
       </ion-row>
-
       <ion-col size="10" class="ion-align-self-center">
-
         <form (ngSubmit)="registrar(form)" #form="ngForm">
+          <ion-input [(ngModel)]="usuario.displayName" aria-label="Custom input" placeholder="Custom input"
+            class="custom" helperText=" " [counter]="true" [maxlength]="40" shape="round" type="text"
+            placeholder="Ingresa tu nombre" fill="outline" name="nombre_r" id="nombre_r" errorText="Ingresar texto."
+            text></ion-input>
 
-          <ion-input
-            [(ngModel)]="usuario.displayName"
-            aria-label="Custom input" placeholder="Custom input" class="custom"
-            helperText=" "
-            [counter]="true"
-            [maxlength]="40"
-            shape="round"
-            type="text"
-            placeholder="Ingresa tu nombre"
-            fill="outline"
-            name="nombre_r"
-            id="nombre_r"
-            errorText="Ingresar texto."
-            text
-          ></ion-input>
+          <ion-input [(ngModel)]="usuario.apellidos" aria-label="Custom input" placeholder="Custom input" class="custom"
+            helperText=" " [counter]="true" [maxlength]="40" shape="round" type="text"
+            placeholder="Ingresa tus apellidos" fill="outline" name="apellidos_r" id="apellidos_r"
+            errorText="Ingresar texto." text></ion-input>
 
-          <ion-input
-            [(ngModel)]="usuario.apellidos"
-            aria-label="Custom input" placeholder="Custom input" class="custom"
-            helperText=" "
-            [counter]="true"
-            [maxlength]="40"
-            shape="round"
-            type="text"
-            placeholder="Ingresa tus apellidos"
-            fill="outline"
-            name="apellidos_r"
-            id="apellidos_r"
-            errorText="Ingresar texto."
-            text
-          ></ion-input>
+          <ion-input [(ngModel)]="usuario.email" aria-label="Custom input" placeholder="Custom input" class="custom"
+            helperText=" " [counter]="true" [maxlength]="40" shape="round" type="email" placeholder="Ingresa tu correo"
+            fill="outline" name="email_r" id="email_r" errorText="Correo Invalido." email></ion-input>
 
-          <ion-input
-            [(ngModel)]="usuario.email"
-            aria-label="Custom input" placeholder="Custom input" class="custom"
-            helperText=" "
-            [counter]="true"
-            [maxlength]="40"
-            shape="round"
-            type="email"
-            placeholder="Ingresa tu correo"
-            fill="outline"
-            name="email_r"
-            id="email_r"
-            errorText="Correo Invalido."
-            email
-          ></ion-input>
-
-          <ion-input
-            [(ngModel)]="usuario.password"
-            aria-label="Custom input" placeholder="Custom input" class="custom"
-            helperText=" "
-            [counter]="true"
-            [maxlength]="20"
-            shape="round"
-            type="password"
-            placeholder="Ingresa tu contraseña"
-            fill="outline"
-            name="password_r"
-            id="password_r"
-            errorText="Minimo 6 caracteres"
-            minlength="6"
-          ></ion-input>
+          <ion-input [(ngModel)]="usuario.password" aria-label="Custom input" placeholder="Custom input" class="custom"
+            helperText=" " [counter]="true" [maxlength]="20" shape="round" type="password"
+            placeholder="Ingresa tu contraseña" fill="outline" name="password_r" id="password_r"
+            errorText="Minimo 6 caracteres" minlength="6"></ion-input>
 
           <ion-button type="submit" fill="outline" shape="round" expand="block" color="">
             Registrar
-          </ion-button> <br>
-
-          <ion-button routerLink="/entrance" fill="outline" shape="round" expand="block" color="">
+          </ion-button>
+          <br>
+          <ion-button routerLink="/index" fill="outline" shape="round" expand="block" color="">
             Cancelar
           </ion-button>
-
         </form>
-
       </ion-col>
-
     </ion-row>
-
   </ion-grid>
 
-  <ion-row class="ion-justify-content-center">
-    <h6>¿Ya tienes una cuenta?</h6>
-    <h6 class="text-r" routerLink="/login">INICIAR SESIÓN</h6>
-  </ion-row>
+  <ion-grid>
+    <ion-row class="ion-justify-content-center">
+      <ion-col size="12">
+        <ion-card class="ion-text-center">
 
+          <br>
+          <ion-title><strong>Empleados Registrados</strong></ion-title>
+
+          <ion-list [inset]="true">
+            <ion-item-sliding *ngFor="let usuario of usuarios">
+              <ion-item [button]="true">
+                <ion-avatar aria-hidden="true" slot="start">
+                  <img alt="Avatar" src="https://ionicframework.com/docs/img/demos/avatar.svg" />
+                </ion-avatar>
+                <ion-label>
+                  <h2>{{ usuario.displayName }} {{ usuario.apellidos }}</h2>
+                  <p>Correo: {{ usuario.email }}</p>
+                  <p>Tipo: {{usuario.tipo}}</p>
+                  <p>Contraseña: {{usuario.password}}</p>
+                </ion-label>
+              </ion-item>
+              <ion-item-options slot="end">
+                <ion-item-option color="success" (click)="editarUsuario(usuario)">
+                  <ion-icon slot="icon-only" name="create"></ion-icon>
+                </ion-item-option>
+                <ion-item-option color="danger" expandable="true" *ngIf="usuario.uid"
+                  (click)="confirmarEliminacion(usuario.uid)">
+                  <ion-icon slot="icon-only" name="trash"></ion-icon>
+                </ion-item-option>
+              </ion-item-options>
+            </ion-item-sliding>
+          </ion-list>
+
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>

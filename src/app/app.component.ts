@@ -40,6 +40,12 @@ export class AppComponent {
       nombre: 'Gastos',
       ruta: '/a-gastos',
       color:'dark'
+    },
+    {
+      icon: 'person-add-outline',
+      nombre: 'Crear Cuenta',
+      ruta: '/register',
+      color:'dark'
     }
   ];
 

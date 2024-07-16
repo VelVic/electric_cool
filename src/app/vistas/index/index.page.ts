@@ -13,27 +13,6 @@ export class IndexPage implements OnInit {
 
   menuType: string = 'displayName';
 
-  comp : Comp [] = [
-    {
-      icon: 'information-circle-outline',
-      nombre: 'Leer más',
-      ruta: '/index',
-      color:'light'
-    },
-    {
-      icon: 'airplane-outline',
-      nombre: 'Turismo',
-      ruta: '/index',
-      color:'light'
-    },
-    {
-      icon: 'sparkles-outline',
-      nombre: 'Festividades',
-      ruta: '/index',
-      color:'light'
-    }
-  ];
-
   constructor(
     private ruta:Router,
     private servicio:AuthService,

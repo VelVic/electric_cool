@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Usuario } from './../Models/Usuario';
+import { Registros } from './../Models/Registros';
 import { HttpClient } from '@angular/common/http';
 import { map } from 'rxjs';
 
@@ -70,7 +71,7 @@ export class AuthService {
 
           const datos={
             ...usuario,
-            tipo:"normal",
+            tipo:"admin",
             uid:resp['localId']
           };
 
@@ -125,4 +126,34 @@ export class AuthService {
 
     localStorage.setItem('expira',hoy.getTime().toString());
   }
+
+  r_registro({ registros }: { registros: Registros; }){
+    const authDatos={
+      ...registros,
+      returnSecureToken: true
+    };
+
+   return this.http.post(`${this.AUTH}signUp?key=${this.apikey}`,authDatos)
+    .pipe(
+      map(
+        (resp:any)=>{
+          console.log(resp);
+          this.almacenarToken(resp['idToken']);
+          localStorage.setItem('uid', resp['localId']);
+
+          const datos={
+            ...registros,
+            uid:resp['localId']
+          };
+
+          this.http.post(`${this.database}registros.json`,datos)
+            .subscribe(res=>{
+              console.log(res);
+            });
+            return resp;
+        }
+      )
+    );
+  }
 }
+

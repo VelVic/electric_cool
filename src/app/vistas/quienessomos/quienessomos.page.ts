@@ -1,14 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { Route, Router } from '@angular/router';
+import { Router } from '@angular/router';
 import { MenuController } from '@ionic/angular';
 import { AuthService } from 'src/app/servicios/auth.service';
 
 @Component({
-  selector: 'app-entrance',
-  templateUrl: './entrance.page.html',
-  styleUrls: ['./entrance.page.scss'],
+  selector: 'app-quienessomos',
+  templateUrl: './quienessomos.page.html',
+  styleUrls: ['./quienessomos.page.scss'],
 })
-export class EntrancePage implements OnInit {
+export class QuienessomosPage implements OnInit {
 
   constructor(
     private ruta:Router,
@@ -42,6 +42,7 @@ interface Comp{
   nombre:string;
   ruta:string;
   color:string;
+
 
 
 }
